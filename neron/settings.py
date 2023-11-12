@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'apps.diseño',
     'apps.cart',
     'apps.accounts',
+    'apps.orders',
 ]
 
 # AUTHENTICATION_BACKENDS = [
