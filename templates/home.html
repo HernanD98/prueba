@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- ========================= SECTION MAIN ========================= -->
+<section class="section-intro padding-y-sm">
+
+	<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			{% for banner in banners %}
+				<div class="carousel-item {% if forloop.first %}active{% endif %}" data-interval="3000">
+					<img src="{{ banner.images.url }}" class="d-block w-100" alt="{{ banner.banner_name }}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+	<div class="row row-cols-1 row-cols-md-2">
+	
+		{% for image in homeCard %}
+	
+		<div class="col mb-4">
+			<div class="card my-custom-card">
+				<a href="#"> <img src="{{ image.images.url }}" class="card-img-top" alt="{{ image.slug }}"> </a>
+				<p class="card-text">{{ image.description }}</p>
+				<!-- <div class="card-text">
+					{{ image.description }}
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text"></p>
+				</div> -->
+			</div>
+		</div>
+			
+		{% endfor %}
+
+	</div>
+
+<!-- <header class="section-heading">
+	<a href="./store.html" class="btn btn-outline-primary float-right">Ver Todo</a>
+	<h3 class="section-title">Productos populares</h3>
+</header>
+
+	
+<div class="row">
+	{% for product in products %}
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
+			<figcaption class="info-wrap">
+				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">${{ product.price }}</div>
+			</figcaption>
+		</div>
+	</div>
+	{% endfor %}
+</div> -->
+
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+{% include 'includes/semi_footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,39 @@
+/* *::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E0E4E5;
+} */
+
+/* Banner Bootstrap - INICIO */
+
+.carousel-inner{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* .my-custom-card .card-text {
+    position: absolute;
+    top: 50%;
+    bottom: 0%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+} */
+
+.my-custom-card .card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}

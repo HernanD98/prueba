@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+    
+    {% if request.GET.command == 'verification' %}
+
+    <div class="container">
+        Muchas gracias por registrarte en nuestra tienda virtual de Neron, le hemos enviado un email para confirmar su cuenta '{{request.GET.email}}'
+        <br><br>
+        Si ya verificó su cuenta, entonces puede conectarse a ella en: <a href="{% url 'login' %}">Iniciar sesión</a>
+    </div>
+        
+    {% else %}
+        
+    <div class="container">
+
+        {% include 'includes/alerts.html' %}
+
+        <h2>Iniciar sesión</h2>
+
+        <form action="{% url 'login' %}" method="POST">
+
+            {% csrf_token %}
+
+            <input type="email" name="email" placeholder="Ingrese su email" required>
+            <br>
+            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+            <br>
+
+            <a href="{% url 'forgotPassword' %}">Olvidó su contraseña?</a>
+            <br><br>
+
+            <button type="submit">Iniciar sesión</button>
+
+        </form>
+
+        <p>No tiene una cuenta? <a href="{% url 'register' %}">Registrate</a> </p>
+        
+    </div>
+
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+body {
+    background-image: url('../images/background/Background_Img.jpg');
+    position: relative;
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-attachment: fixed; /* Para que la imagen permanezca fija al desplazar la página */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+h2 {
+    color: #fff;
+}
+
+form {
+    margin: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff5733; /* Color de fondo naranja */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e94b20; /* Color de fondo naranja más oscuro al pasar el ratón */
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: rgb(10, 107, 14) 255, 61);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
