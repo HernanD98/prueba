@@ -11,6 +11,8 @@ class Payment(models.Model):
     amount_id = models.CharField(max_length=100)
     status = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        app_label = 'orders'
     
     def __str__(self):
         return self.payment_id
