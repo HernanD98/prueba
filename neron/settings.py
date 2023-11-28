@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='Hernan2312')
 DEBUG = 'RENDER' not in os.environ
 
 
-ALLOWED_HOSTS = ["https://neron-sport.onrender.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["https://neron-sport.onrender.com",]
 
 
 
